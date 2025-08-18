@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Loan Application Prediction</h2>
+    <form id="loanForm">
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="number" id="income" placeholder="Income" required>
+        <input type="number" id="loanAmount" placeholder="Loan Amount" required>
+        <input type="number" id="creditScore" placeholder="Credit Score" required>
+        <input type="number" id="monthsEmployed" placeholder="Months Employed" required>
+        <input type="number" id="interestRate" placeholder="Interest Rate" step="0.01" required>
+        <input type="number" id="dtiRatio" placeholder="DTI Ratio" step="0.01" required>
+        <input type="number" id="loanTerm" placeholder="Loan Term" required>
+        <button type="submit">Check Eligibility</button>
+    </form>
+
+    <div id="loader" style="display:none;">Loading...</div>
+    <div id="result"></div>
+    <button id="refreshBtn">Clear</button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
